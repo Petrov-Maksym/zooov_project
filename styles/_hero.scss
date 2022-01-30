@@ -16,6 +16,7 @@
         opacity: .6;
         right: 0;
         bottom: 92px;
+        z-index: 0;
         @include b(tablet) {
             height: 400px;
             width: 138px;
@@ -26,10 +27,14 @@
     &__wrap {
         display: flex;
         align-items: center;
-        padding: 30px 0;
-        min-height: calc(100vh - 225px);
+        padding: 30px 0 225px;
+        min-height: 100vh;
         @include b(mobile) {
-            padding-right: 24px;
+            padding: 0;
+        }
+
+        @include b(tablet) {
+            padding: 0;
         }
     }
         
@@ -87,28 +92,80 @@
 .header {
     @include x-center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 20px 0;
 
     &__logo {
-        max-width: 80px;
-        max-height: 80px;  
+    max-width: 80px;
+    max-height: 80px;  
         @include b(tablet) {
+            position: fixed;
+            top: 20px;
             width: 60px;
             height: 60px;
+            margin-bottom: 137px;
+            z-index: 3;
         } 
+    }
+
+    &__nav {
+        @include b(tablet) {
+            display: none;
+            position: fixed;
+            overflow: hidden;
+            background-color: #E5E5E5;
+            height: 812px;
+            padding: 15px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        &--open {
+            @include b(tablet) {
+                display: block;
+            }
+        }
+        
+        &-left {
+            display: none;
+            @include b(tablet) {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 140px
+            }
+        }
+    
+        &-right {
+            display: none;
+            @include b(tablet) {
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 100px;
+            }
+            
+        }
+        
     }
   
     &__nav-list {
         display: flex;
         margin: 0 -26px;
         @include b(tablet) {
-            display: none;
+            display: block;
         }
     }
 
     &__nav-item {
         padding: 0 26px;
-        height: 22px;
+        height: 22px; 
+        @include b(tablet) {
+            padding-bottom: 60px;
+            top: 122px;
+        }
     }
 
     &__nav-link {
@@ -117,7 +174,15 @@
         font-weight: 500;
         line-height: 1.37;
         color: $white-color;
-        @include trs;
+        transition: 0.5s;
+        @include b(tablet) {
+            display: block;
+            font-weight: 600;
+            font-size: 24px;
+            color: $main-color;
+            padding: 0 15px;
+            top: 122px;
+        }
         
         &::after {
             content: '';
@@ -127,19 +192,22 @@
             width: 0;
             height: 2px;
             background-color: #961914;
-            @include trs;
+            transition: 0.3s;
+            @include b(tablet) {
+                left: 25%;
+            }
         }
 
         &:hover::after {
             width: 100%;
+            @include b(tablet) {
+                width: 50%;
+            }
         }
        
     }
 
-    .header__btn-menu--active {
-        @include trs;
-        opacity: 0.2;
-    }
+    
 
     &__btn-menu {
         display: none;
@@ -150,24 +218,35 @@
         cursor: pointer;
         @include b(tablet) {
             display: block;
+            position: fixed;
+            top: 35px;
+            right: 24px;
+            z-index: 2;
+           
+            &:hover {
+                transform: scale(1.3);
+            }
+
         }
+        
+       
 
         
-        // &--active .header__btn-line:nth-child(1) {
-        //     transform: rotate(45deg);
-        //     top: 9px;
-        //     opacity: .2;
-        // }
+        &--active .header__btn-line:nth-child(1) {
+            transform: rotate(45deg);
+            top: 9px;
+            background: $main-color;
+        }
 
-        // &--active .header__btn-line:nth-child(2) {
-        //     display: none;
-        // }
+        &--active .header__btn-line:nth-child(2) {
+            display: none;
+        }
 
-        // &--active .header__btn-line:nth-child(3) {
-        //     transform: rotate(-45deg);
-        //     top: 9px; 
-        //     opacity: .2;  
-        // }
+        &--active .header__btn-line:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 9px; 
+            background: $main-color;
+        }
     }
 
     &__btn-line {
@@ -178,10 +257,7 @@
         border-radius: 4px;
         width: 27px;
         @include trs;
-        @include b(tablet) {
-            display: block;
-        }
-
+       
         &:nth-child(1) {
             top: 0;
         }
