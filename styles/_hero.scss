@@ -1,0 +1,205 @@
+.hero {
+    padding-bottom: 90px;
+    
+    &__bg {
+        background-image: url(../img/hero-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 100vh;
+    }
+        
+    &__heading-img {
+        position: absolute;
+        width: 168px;
+        height: 548px;
+        opacity: .6;
+        right: 0;
+        bottom: 92px;
+        @include b(tablet) {
+            height: 400px;
+            width: 138px;
+            top: 425px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        padding: 30px 0;
+        min-height: calc(100vh - 225px);
+        @include b(mobile) {
+            padding-right: 24px;
+        }
+    }
+        
+    &__wrap-bg {
+        background-image: url(../img/decor/hero-ellips.png);
+        background-repeat: no-repeat;   
+        background-position: 78% 24%;   
+        @include b(mobile) {
+            background-image: url(../img/decor/hero-ellips-sm.png);
+            background-position: -1% 18%;
+        }
+    }
+
+    &__box {
+        max-width: 490px;
+    }
+
+    &__title {
+        font-family: 'Oswald';
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        margin-bottom: 10px;
+        color: $white-color;
+        @include b(mobile) {
+            width: 338px;
+            font-size: 44px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .hero__transfer {
+        display: block;
+        @include b(mobile) {
+            display: none;
+        }
+    }
+
+    &__info {
+        width: 367px;
+        font-size: 20px;
+        margin-bottom: 25px;
+        color: $white-color;
+        @include b(mobile) {
+            width: 227px;
+            font-size: 18px;
+            line-height: 1.39;
+            margin-bottom: 48px;
+        }
+    }
+
+}
+
+.header {
+    @include x-center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    &__logo {
+        max-width: 80px;
+        max-height: 80px;  
+        @include b(tablet) {
+            width: 60px;
+            height: 60px;
+        } 
+    }
+  
+    &__nav-list {
+        display: flex;
+        margin: 0 -26px;
+        @include b(tablet) {
+            display: none;
+        }
+    }
+
+    &__nav-item {
+        padding: 0 26px;
+        height: 22px;
+    }
+
+    &__nav-link {
+        position: relative;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.37;
+        color: $white-color;
+        @include trs;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background-color: #961914;
+            @include trs;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+       
+    }
+
+    .header__btn-menu--active {
+        @include trs;
+        opacity: 0.2;
+    }
+
+    &__btn-menu {
+        display: none;
+        width: 27px;
+        height: 16px;
+        right: 0;
+        position: relative;
+        cursor: pointer;
+        @include b(tablet) {
+            display: block;
+        }
+
+        
+        // &--active .header__btn-line:nth-child(1) {
+        //     transform: rotate(45deg);
+        //     top: 9px;
+        //     opacity: .2;
+        // }
+
+        // &--active .header__btn-line:nth-child(2) {
+        //     display: none;
+        // }
+
+        // &--active .header__btn-line:nth-child(3) {
+        //     transform: rotate(-45deg);
+        //     top: 9px; 
+        //     opacity: .2;  
+        // }
+    }
+
+    &__btn-line {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 27px;
+        @include trs;
+        @include b(tablet) {
+            display: block;
+        }
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 7px;
+        }
+
+        &:nth-child(3) {
+            top: 14px;
+        }
+
+    }
+   
+}
+
+
+
+
+
+
