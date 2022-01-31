@@ -147,7 +147,6 @@ a {
 .hero__wrap {
   display: flex;
   align-items: center;
-  padding: 30px 0 225px;
   min-height: 100vh;
 }
 @media (max-width: 767px) {
@@ -163,16 +162,17 @@ a {
 .hero__wrap-bg {
   background-image: url(../img/decor/hero-ellips.png);
   background-repeat: no-repeat;
-  background-position: 78% 24%;
+  background-position: 78% 19%;
 }
 @media (max-width: 767px) {
   .hero__wrap-bg {
     background-image: url(../img/decor/hero-ellips-sm.png);
-    background-position: -1% 18%;
+    background-position: -1% 15%;
   }
 }
 .hero__box {
   max-width: 490px;
+  padding-bottom: 85px;
 }
 .hero__title {
   font-family: "Oswald";
@@ -225,21 +225,19 @@ a {
 }
 @media (max-width: 1024px) {
   .header__logo {
-    position: fixed;
-    top: 20px;
+    position: relative;
     width: 60px;
     height: 60px;
-    margin-bottom: 137px;
     z-index: 3;
   }
 }
 @media (max-width: 1024px) {
   .header__nav {
     display: none;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     background-color: #E5E5E5;
-    height: 812px;
+    height: 885px;
     padding: 15px;
     left: 0;
     right: 0;
@@ -291,7 +289,7 @@ a {
 @media (max-width: 1024px) {
   .header__nav-item {
     padding-bottom: 60px;
-    top: 122px;
+    height: 0;
   }
 }
 .header__nav-link {
@@ -320,7 +318,7 @@ a {
   width: 0;
   height: 2px;
   background-color: #961914;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 @media (max-width: 1024px) {
   .header__nav-link::after {
@@ -340,18 +338,18 @@ a {
   width: 27px;
   height: 16px;
   right: 0;
-  position: relative;
+  position: absolute;
   cursor: pointer;
 }
 @media (max-width: 1024px) {
   .header__btn-menu {
     display: block;
-    position: fixed;
-    top: 35px;
     right: 24px;
     z-index: 2;
+    transition: all 0.3s;
   }
   .header__btn-menu:hover {
+    transition: all 0.3s;
     transform: scale(1.3);
   }
 }
