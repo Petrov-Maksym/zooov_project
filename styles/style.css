@@ -561,24 +561,107 @@ a {
   margin-right: 16px;
 }
 
+.advantages__bg {
+  position: relative;
+}
 .advantages__wrap {
   padding: 90px 0;
+  position: relative;
+}
+.advantages__top-decor {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+@media (max-width: 1024px) {
+  .advantages__top-decor {
+    top: 22%;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__top-decor {
+    display: none;
+  }
+}
+.advantages__decor-long {
+  display: none;
+}
+@media (max-width: 767px) {
+  .advantages__decor-long {
+    display: block;
+    position: absolute;
+    left: -2px;
+    bottom: 140px;
+  }
 }
 .advantages__header {
   margin-bottom: 63px;
 }
+@media (max-width: 1024px) {
+  .advantages__header {
+    font-size: 40px;
+    margin-bottom: 46px;
+    padding-left: 13%;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__header {
+    padding-left: 0;
+  }
+}
 .advantages__row {
   display: flex;
-  position: relative;
-  margin: 0 -10px;
+  align-items: center;
+  margin: 0 -12px;
+}
+@media (max-width: 1024px) {
+  .advantages__row {
+    flex-direction: column;
+  }
 }
 .advantages__col {
   width: 25%;
-  padding: 0 10px;
+  padding: 0 12px;
+}
+@media (max-width: 1024px) {
+  .advantages__col {
+    width: 75%;
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__col {
+    width: 100%;
+  }
+}
+.advantages__col-bottom::before {
+  content: url(../img/decor/advantages__decor-line.png);
+  top: 35px;
+  left: 75px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .advantages__col-bottom::before {
+    display: none;
+  }
+}
+.advantages__col-bottom:nth-child(4)::before {
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  .advantages__col-bottom {
+    padding-left: 32px;
+  }
 }
 .advantages__icon {
   width: 40px;
   margin-bottom: 29px;
+}
+@media (max-width: 1024px) {
+  .advantages__icon {
+    margin-bottom: 22px;
+  }
 }
 .advantages__title {
   font-size: 18px;
@@ -588,6 +671,12 @@ a {
 }
 .advantages__descr {
   font-weight: 1.37;
+}
+.advantages__link {
+  color: #961914;
+}
+.advantages__link:hover {
+  text-decoration: underline #961914;
 }
 
 /*# sourceMappingURL=style.css.map */
