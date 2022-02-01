@@ -16,7 +16,7 @@
         z-index: -1;
 
         @include b(tablet) {
-            top: 22%;
+            top: 23%;
         }
 
         @include b(mobile) {
@@ -39,33 +39,22 @@
         @include b(tablet) {
             font-size: 40px;
             margin-bottom: 46px;
-            padding-left: 13%;
-        }
-
-        @include b(mobile) {
-            padding-left: 0;
         }
     }
 
     &__row {
-        display: flex;
-        align-items: center;
+        display: inline-block;
         margin: 0 -12px;
-        @include b(tablet) {
-            flex-direction: column;
-        }
     }
 
     &__col {
+        float: left;
         width: 25%;
         padding: 0 12px;
         @include b(tablet) {
-            width: 75%;
-            margin-bottom: 46px;
-        }
-
-        @include b(mobile) {
             width: 100%;
+            margin-bottom: 46px;
+
         }
     }
 
@@ -85,15 +74,20 @@
 
     &__col-bottom {
         @include b(mobile) {
-            padding-left: 32px;
+            padding-left: 55px;
         }
     }
 
     &__icon {
-        width: 40px;
+        height: 40px;
         margin-bottom: 29px;
         @include b(tablet) {
             margin-bottom: 22px;
+        }
+
+        &-img {
+            width: 40px;
+            height: 40px;
         }
     }
 
