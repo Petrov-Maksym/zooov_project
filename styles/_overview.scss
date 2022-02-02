@@ -1,82 +1,66 @@
 .overview {
-    padding: 95px 0 90px;
+    padding: 90px 0;
 
     @include b(tablet) {
-        padding: 40px 0 40px 0;
+        padding: 40px 0;
     }
     
     &__bg {
         background-color: #FFF4F3;
-        height: 100%;
         }
 
     &__wrap {
         display: flex;
         margin: 0 -30px;
+        padding: 80px 0 ;
                 
        @include b(tablet) {
            flex-direction: column-reverse;
+           padding: 53px 0 40px;
         }
     }
 
     &__col {
         position: relative;
-        width: 53%;
+        width: 50%;
         padding: 0 30px;
 
         @include b(tablet) {
             width: 100%;
-        }
-
-        &-content {
-            @include b(tablet) {
-                display: flex;
-                justify-content: center;
-                padding-bottom: 144px;
-            }
+            padding-bottom: 40px;
         }
     }
 
     &__pict {
-        position: relative;
-        width: 475px;
-        height: 100%;
+        width: 85%;
         object-fit: cover;
-        top: 80px;
 
         @include b(tablet) {
-            width: 261px;
+            width: 75%;
             top: 0;
         }
 
         @include b(mobile-sm-b) {
-            display: flex;
+            width: 85%;
+            top: 0;
+            right: 85px;
+
         }
     }
-
+    
     &__pict-sm {
-        position: relative;
-        width: 362px;
-        height: 100%;
+        position: absolute;
+        width: 55%;
         object-fit: cover;
-        left: 188px;
-        bottom: 135px;
-        padding-right: 20px;
-
+        bottom: 0;
+        right: 40px;
+       
         @include b(tablet) {
-            width: 202px;
-            padding: 0;
-            left: -110px;
-            bottom: -195px;
-        }
-    }
-
-    &__descr {
-        padding: 120px 0;
-
-        @include b(tablet) {
-            padding: 0;
-            margin-bottom: 76px;
+            position: absolute;
+            object-fit: cover;
+            width: 45%;
+            bottom: 0;
+            right: 0;
         }
     }
 
@@ -85,6 +69,7 @@
         margin-bottom: 40px;
 
         @include b(tablet) {
+            padding-top: 0;
             margin-bottom: 24px;
         }
     }
