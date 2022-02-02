@@ -1,11 +1,15 @@
 .advantages {
+    padding: 90px 0;
+
+    @include b(tablet) {
+        padding: 80px 0 40px;
+    }
 
     &__bg {
         position: relative;
     }
 
     &__wrap {
-        padding: 90px 0;
         position: relative;
     }
 
@@ -30,7 +34,7 @@
             display: block;
             position: absolute;
             left: -2px;
-            bottom: 140px;
+            bottom: 55px;
         }
     }
 
@@ -43,18 +47,19 @@
     }
 
     &__row {
-        display: inline-block;
+        display: flex;
         margin: 0 -12px;
+        @include b(mobile) {
+            flex-direction: column;
+        }
     }
 
     &__col {
-        float: left;
         width: 25%;
         padding: 0 12px;
         @include b(tablet) {
             width: 100%;
             margin-bottom: 46px;
-
         }
     }
 

@@ -1,0 +1,62 @@
+.count {
+    padding: 45px 0 90px;
+    
+    @include b(tablet) {
+        padding: 40px 0;
+    }
+
+    &__decor {
+        position: relative;
+        width: 1198px;
+        height: 194px;
+        left: 5px;
+        top: 195px;
+        opacity: 0.6;
+    }
+
+    &__wrap {
+        @include x-center;
+        justify-content: space-between;
+        height: 184px;
+        background-color: $primary-light-color;
+
+        @include b(tablet) {
+            flex-direction: column;
+            align-content: space-between;
+            height: 248px;
+        }
+    }
+
+    &__label {
+        padding-left: 50px;
+        
+        @include b(tablet) {
+            padding: 32px 21px;
+        }
+    }
+
+    &__descr {
+        font-family: $main-ff;
+        font-weight: 500;
+        font-size: 28px;
+        letter-spacing: 0.02px;
+
+        @include b(tablet) {
+            text-align: center;
+            font-family: $main-ff;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.2px;
+            
+        }
+    } 
+
+    &__btn-box {
+        padding: 0 121px 0 75px;
+
+        @include b(tablet) {
+            padding: 0 0 32px;
+        }
+    }
+
+}
