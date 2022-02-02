@@ -776,7 +776,6 @@ a {
 .overview__wrap {
   display: flex;
   margin: 0 -30px;
-  position: relative;
 }
 @media (max-width: 1024px) {
   .overview__wrap {
