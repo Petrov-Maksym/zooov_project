@@ -1,0 +1,99 @@
+.overview {
+    padding: 95px 0 90px;
+
+    @include b(tablet) {
+        padding: 40px 0 40px 0;
+    }
+    
+    &__bg {
+        background-color: #FFF4F3;
+        height: 100%;
+        }
+
+    &__wrap {
+        display: flex;
+        margin: 0 -30px;
+        position: relative;
+        
+       @include b(tablet) {
+           flex-direction: column-reverse;
+        }
+    }
+
+    &__col {
+        position: relative;
+        width: 53%;
+        padding: 0 30px;
+
+        @include b(tablet) {
+            width: 100%;
+        }
+
+        &-content {
+            @include b(tablet) {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 144px;
+            }
+        }
+    }
+
+    &__pict {
+        position: relative;
+        width: 475px;
+        height: 100%;
+        object-fit: cover;
+        top: 80px;
+
+        @include b(tablet) {
+            width: 261px;
+            top: 0;
+        }
+
+        @include b(mobile-sm-b) {
+            display: flex;
+        }
+    }
+
+    &__pict-sm {
+        position: relative;
+        width: 362px;
+        height: 100%;
+        object-fit: cover;
+        left: 188px;
+        bottom: 135px;
+        padding-right: 20px;
+
+        @include b(tablet) {
+            width: 202px;
+            padding: 0;
+            left: -110px;
+            bottom: -195px;
+        }
+    }
+
+    &__descr {
+        padding: 120px 0;
+
+        @include b(tablet) {
+            padding: 0;
+            margin-bottom: 76px;
+        }
+    }
+
+    &__header {
+        padding-top: 53px;
+        margin-bottom: 40px;
+
+        @include b(tablet) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__text {
+        font-size: $main-fz;
+        line-height: 1.3;
+        color: $grey-color
+    }
+}
+
