@@ -1,4 +1,4 @@
-.hero__btn {
+.btn {
     position: relative;
     @include center;
     width: 227px;
@@ -18,25 +18,7 @@
     }
 }
 
-.count__btn {
-    position: relative;
-    @include center;
-    width: 171px;
-    height: 48px;
-    background: $primary-color;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-    font-size: $main-fz;
-    line-height: 1.37;
-    color: $white-color;
-    cursor: pointer;
-    @include trs;
-    
-    &:hover {
-        background-color: #75110D;
-    }
-}
+
 
 
  

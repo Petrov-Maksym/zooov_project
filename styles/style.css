@@ -97,7 +97,7 @@ a {
   }
 }
 
-.hero__btn {
+.btn {
   position: relative;
   display: flex;
   justify-content: center;
@@ -114,28 +114,7 @@ a {
   transition: all 0.3s;
   z-index: 1;
 }
-.hero__btn:hover {
-  background-color: #75110D;
-}
-
-.count__btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 171px;
-  height: 48px;
-  background: #961914;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.37;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.count__btn:hover {
+.btn:hover {
   background-color: #75110D;
 }
 
@@ -590,12 +569,15 @@ a {
     padding: 40px 0;
   }
 }
-.count__decor {
+.count__bg {
   position: relative;
+}
+.count__decor {
+  position: absolute;
   width: 1198px;
   height: 194px;
   left: 5px;
-  top: 195px;
+  top: 0;
   opacity: 0.6;
 }
 .count__wrap {
@@ -642,6 +624,11 @@ a {
   .count__btn-box {
     padding: 0 0 32px;
   }
+}
+.count__btn {
+  width: 171px;
+  height: 48px;
+  border: none;
 }
 
 .advantages {
@@ -804,26 +791,19 @@ a {
     top: 0;
   }
 }
-@media (max-width: 479px) {
-  .overview__pict {
-    width: 85%;
-    top: 0;
-    right: 85px;
-  }
-}
 .overview__pict-sm {
   position: absolute;
-  width: 55%;
+  width: 57%;
   object-fit: cover;
-  bottom: 0;
+  top: 50%;
   right: 40px;
 }
 @media (max-width: 1024px) {
   .overview__pict-sm {
     position: absolute;
     object-fit: cover;
-    width: 45%;
-    bottom: 0;
+    width: 50%;
+    top: 60%;
     right: 0;
   }
 }
