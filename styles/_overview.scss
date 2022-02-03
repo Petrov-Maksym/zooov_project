@@ -39,27 +39,20 @@
             width: 75%;
             top: 0;
         }
-
-        @include b(mobile-sm-b) {
-            width: 85%;
-            top: 0;
-            right: 85px;
-
-        }
     }
     
     &__pict-sm {
         position: absolute;
-        width: 55%;
+        width: 57%;
         object-fit: cover;
-        bottom: 0;
+        top: 50%;
         right: 40px;
        
         @include b(tablet) {
             position: absolute;
             object-fit: cover;
-            width: 45%;
-            bottom: 0;
+            width: 50%;
+            top: 60%;
             right: 0;
         }
     }
