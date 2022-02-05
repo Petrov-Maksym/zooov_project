@@ -1,6 +1,6 @@
 .ingredients {
     padding: 40px 0 100px;
-    @include b(mobile) {
+    @include b(tablet) {
         padding: 0 0 50px;
     }
 

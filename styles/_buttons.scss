@@ -18,6 +18,24 @@
     }
 }
 
+.count__btn {
+    width: 171px;
+    height: 48px;
+    border: none;
+}
+
+.menu__btn {
+    width: 171px;
+    height: 48px;
+    border: 1px solid #75110D;
+    background: none;
+    color: $primary-color;
+
+    &:hover {
+        color: $primary-light-color;
+    }
+}
+
 
 
 
