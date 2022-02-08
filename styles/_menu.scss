@@ -1,5 +1,5 @@
 .menu {
-    padding: 100px 0 40px;
+    padding: 90px 0 40px;
 
     @include b(tablet) {
         padding: 50px 0 30px;
@@ -7,15 +7,31 @@
 
     &__wrap {
         position: relative;
-        z-index: 1;
+        padding: 10px 0;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../img/decor/menu-big.png);
+            background-repeat: no-repeat;
+            background-position: 175px 3px; 
+
+            @include b(mobile) {
+                background-position: 158px 3px;
+                background-size: 158px 70px;
+            }
+        }
     }
     
     &__header {
         position: relative;
-        @include x-center;
+        display: flex;
         justify-content: space-between;
         margin-bottom: 40px;
-        z-index: 2;
 
         @include b(tablet) {
             margin-bottom: 35px;
@@ -25,12 +41,7 @@
     &__title {
         padding-right: 50px;
         min-width: 380px;
-        background-image: url(../img/decor/menu-big.png);
-        background-repeat: no-repeat;
-        background-position: 175px -8px; 
-        position: relative;
-        z-index: 5;
-
+        
         @include b(mobile-sm-b) {
             font-size: 40px;
         }
