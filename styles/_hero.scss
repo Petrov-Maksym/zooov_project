@@ -15,13 +15,13 @@
         height: 548px;
         opacity: .6;
         right: 0;
-        bottom: 92px;
+        bottom: -50px;
         z-index: 0;
 
         @include b(tablet) {
             height: 400px;
             width: 138px;
-            top: 425px;
+            bottom: -85px;
         }
     }
 

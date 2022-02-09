@@ -193,14 +193,14 @@ a {
   height: 548px;
   opacity: 0.6;
   right: 0;
-  bottom: 92px;
+  bottom: -50px;
   z-index: 0;
 }
 @media (max-width: 1024px) {
   .hero__heading-img {
     height: 400px;
     width: 138px;
-    top: 425px;
+    bottom: -85px;
   }
 }
 .hero__wrap {
