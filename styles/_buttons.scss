@@ -20,19 +20,60 @@
 
 .count__btn {
     width: 171px;
-    height: 48px;
     border: none;
 }
 
 .menu__btn {
     width: 171px;
-    height: 48px;
     border: 1px solid #75110D;
     background: none;
     color: $primary-color;
 
     &:hover {
         color: $primary-light-color;
+    }
+}
+
+.footer__btn-social {
+    width: 223px;
+    height: 40px;
+    background: none;
+    margin-bottom: 26px;
+
+    @include b(tablet) {
+        margin-bottom: 16px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $white-color;
+        border-radius: 8px;
+        opacity: 0.2;
+    }
+
+    &:hover::before {
+        opacity: 0;
+    }
+}
+
+.footer__form-btn {
+    width: 214px;
+    background: #FFF4F3;
+    color: #EC7973;
+    font-weight: 700;
+
+    &:hover {
+        color: $white-color;
+    }
+
+    @include b(tablet) {
+        margin-top: 22px;
+        width: 327px;
     }
 }
 

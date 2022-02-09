@@ -17,6 +17,7 @@
         right: 0;
         bottom: 92px;
         z-index: 0;
+
         @include b(tablet) {
             height: 400px;
             width: 138px;
@@ -28,6 +29,7 @@
         display: flex;
         align-items: center;
         min-height: 100vh;
+
         @include b(mobile) {
             padding: 0;
         }
@@ -40,7 +42,8 @@
     &__wrap-bg {
         background-image: url(../img/decor/hero-ellips.png);
         background-repeat: no-repeat;   
-        background-position: 78% 19%;   
+        background-position: 78% 19%;  
+
         @include b(mobile) {
             background-image: url(../img/decor/hero-ellips-sm.png);
             background-position: -1% 15%;
@@ -60,6 +63,7 @@
         letter-spacing: 0.02em;
         margin-bottom: 10px;
         color: $white-color;
+
         @include b(mobile) {
             width: 338px;
             font-size: 44px;
@@ -69,6 +73,7 @@
 
     .hero__transfer {
         display: block;
+
         @include b(mobile) {
             display: none;
         }
@@ -79,6 +84,7 @@
         font-size: 20px;
         margin-bottom: 25px;
         color: $white-color;
+
         @include b(mobile) {
             width: 227px;
             font-size: 18px;
@@ -96,6 +102,7 @@
     &__logo {
     max-width: 80px;
     max-height: 80px;  
+
         @include b(tablet) {
             position: relative;
             width: 60px;
@@ -127,6 +134,7 @@
         
         &-left {
             display: none;
+
             @include b(tablet) {
                 display: block;
                 position: absolute;
@@ -137,6 +145,7 @@
     
         &-right {
             display: none;
+
             @include b(tablet) {
                 display: block;
                 position: absolute;
@@ -149,6 +158,7 @@
     &__nav-list {
         display: flex;
         margin: 0 -26px;
+
         @include b(tablet) {
             display: block;
         }
@@ -157,6 +167,7 @@
     &__nav-item {
         padding: 0 26px;
         height: 22px; 
+
         @include b(tablet) {
             padding-bottom: 60px;
             height: 0;
@@ -170,6 +181,7 @@
         line-height: 1.37;
         color: $white-color;
         transition: 0.5s;
+        
         @include b(tablet) {
             display: block;
             font-weight: 600;
