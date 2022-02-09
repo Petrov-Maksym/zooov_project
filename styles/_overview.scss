@@ -32,12 +32,41 @@
     }
 
     &__pict {
+        position: relative;
         width: 85%;
-        object-fit: cover;
+        object-fit: cover;   
 
         @include b(tablet) {
             width: 75%;
             top: 0;
+            padding-bottom: 85px;
+        }
+    }
+
+    &__decor-dog {
+        display: none;
+
+        @include b(mobile-sm-b) {
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 59%;
+            z-index: 1;
+        }
+    }
+
+    &__decor-hard {
+        display: none;
+
+        @include b(mobile-sm-b) {
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 34%;
+            right: 4%;
+            z-index: 1;
         }
     }
     
@@ -45,14 +74,14 @@
         position: absolute;
         width: 57%;
         object-fit: cover;
-        top: 50%;
+        bottom: -4%;
         right: 40px;
        
         @include b(tablet) {
             position: absolute;
             object-fit: cover;
-            width: 50%;
-            top: 60%;
+            width: 53%;
+            bottom: 0;
             right: 0;
         }
     }

@@ -220,6 +220,10 @@
         transition: all .3s;
     }
 
+    &__form-text:focus {
+        border: white;
+    }
+
 
     &__textarea {
         height: 122px;
@@ -281,8 +285,8 @@
             height: 16px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 2px;
-            left: 0;
-            top: 3px;
+            left: 2px;
+            top: 2px;
             transition: all .3s;
             background-size: 10px 8px;
             background-repeat: no-repeat;
