@@ -1343,9 +1343,6 @@ a {
   border: 3x solid rgba(255, 255, 255, 0.5);
   transition: all 0.3s;
 }
-.footer__form-text:focus {
-  border: white;
-}
 .footer__textarea {
   height: 122px;
   resize: none;

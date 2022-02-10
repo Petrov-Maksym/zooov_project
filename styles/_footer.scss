@@ -203,7 +203,7 @@
         font-family: $main-ff;
         line-height: $main-lh;
         font-size: 14px;
-        transition: all .3s;
+        @include trs;
 
         @include b(tablet) {
             margin-bottom: 16px;
@@ -217,13 +217,8 @@
     &__form-text:hover,
     &__textarea:hover {
         border: 3x solid rgba(255, 255, 255, 0.5);
-        transition: all .3s;
+        @include trs;
     }
-
-    &__form-text:focus {
-        border: white;
-    }
-
 
     &__textarea {
         height: 122px;
