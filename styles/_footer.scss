@@ -46,7 +46,6 @@
         @include b(tablet) {
             padding-top: 56px;
             margin-bottom: 10px;
-            font-size: 40px;
             line-height: 1.3;
         }
     }
@@ -57,9 +56,14 @@
 
     &__phone {
         margin-bottom: 24px;
+        @include trs;
 
         &-num {
             color: $white-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -76,9 +80,10 @@
 
     &__link {
         color: $white-color;
+        @include trs;
 
         &:hover {
-            text-decoration: underline;   
+            text-decoration: underline; 
         }
     }
 
@@ -138,8 +143,8 @@
         width: 143px;
         height: 144px;
         position: absolute;
-        top: 55%;
-        left: -5%;
+        top: 50%;
+        left: -7%;
 
         @include b(tablet) {
             top: 0;
@@ -240,6 +245,11 @@
         }
     }
 
+    &__form-check {
+        width: 50%;
+        padding: 0 25px;
+    }
+
     &__decor-apple {
         width: 104px;
         height: 103px;
@@ -271,9 +281,10 @@
     }       
 
     &-text {
-        padding-left: 24px;
         position: relative;
-
+        font-size: 12px;
+        
+   
         @include b(tablet) {
            margin-bottom: 33px;
         }
@@ -285,8 +296,8 @@
             height: 16px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 2px;
-            left: 2px;
-            top: 2px;
+            left: -25px;
+            top: -1px;
             transition: all .3s;
             background-size: 10px 8px;
             background-repeat: no-repeat;

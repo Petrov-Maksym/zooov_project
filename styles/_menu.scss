@@ -41,10 +41,6 @@
     &__title {
         padding-right: 50px;
         min-width: 380px;
-        
-        @include b(mobile-sm-b) {
-            font-size: 40px;
-        }
     }
 
     &__text {

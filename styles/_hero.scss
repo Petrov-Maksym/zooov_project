@@ -111,6 +111,10 @@
         } 
     }
 
+    &__nav-scroll {
+        overflow: hidden;
+    }
+
     &__nav {
         @include b(tablet) {
             display: none;
@@ -271,6 +275,7 @@
         }
     }
 }
+
 
 
 
